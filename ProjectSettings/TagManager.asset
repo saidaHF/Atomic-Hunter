@@ -38,14 +38,14 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
   - name: Background
     uniqueID: 519066237
     locked: 0
   - name: Ballons
     uniqueID: 153731017
-    locked: 0
-  - name: Default
-    uniqueID: 0
     locked: 0
   - name: Player
     uniqueID: 3318578467

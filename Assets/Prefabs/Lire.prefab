@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 2835317838315289816}
   - component: {fileID: 3163154671169084460}
   - component: {fileID: 1638335053}
-  m_Layer: 9
+  - component: {fileID: 551981657}
+  m_Layer: 0
   m_Name: Lire
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6678002384161739133}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.24, y: 0.8, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
@@ -94,7 +95,7 @@ SortingGroup:
   m_GameObject: {fileID: 6678002384161739133}
   m_Enabled: 1
   m_SortingLayerID: -976388829
-  m_SortingLayer: 1
+  m_SortingLayer: 3
   m_SortingOrder: 0
 --- !u!114 &3163154671169084460
 MonoBehaviour:
@@ -108,7 +109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f0e7411677cbd241a32852a5919a0d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  runSpeed: 11
+  runSpeed: 14
 --- !u!50 &1638335053
 Rigidbody2D:
   serializedVersion: 4
@@ -130,3 +131,15 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &551981657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6678002384161739133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a683eec285574a4989e3efe61d74ee7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
