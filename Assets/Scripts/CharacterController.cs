@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Move : MonoBehaviour
+public class CharacterController : MonoBehaviour
 {
     Rigidbody2D body;
 
     float horizontal;
     float vertical;
+    bool lookingRight; // bool = boolean
 
     public float runSpeed = 20.0f;
 
@@ -25,4 +26,17 @@ public class Move : MonoBehaviour
     void FixedUpdate() {  
         body.velocity = new Vector2(horizontal * runSpeed, vertical * runSpeed);
     }
+
+        // Flip() - so that the object looks away
+    void Flip() {
+        lookingRight = !lookingRight;
+
+       transform.Rotate(0f, 180f, 0f);
+    }
 }
+
+
+
+
+
+
