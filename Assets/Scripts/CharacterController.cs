@@ -14,11 +14,6 @@ public class CharacterController : MonoBehaviour
     [Tooltip("Velocidad")]
     public float runSpeed = 20.0f;
     
-    [Tooltip("Vida total")]
-    public int maxHP;
-    [Tooltip("Vida actual")]
-    public int actualHP;
-
     // Start is called before the first frame update
     void Start() {
         body = GetComponent<Rigidbody2D>(); 

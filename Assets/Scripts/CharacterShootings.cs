@@ -26,14 +26,15 @@ public class CharacterShootings : MonoBehaviour
         RaycastHit2D hit = Physics2D.Raycast(bulletSpawner.position, bulletSpawner.right);
 
         if (hit) {
-            // Search the enemies:
-            Enemies_Controller enemies = hit.transform.GetComponent<Enemies_Controller>();
+            // Search the colliders with damaged:
+            HealthController healthController = hit.transform.GetComponent<HealthController>();
             
-            if(enemies != null) {
-                enemies.Attacked(); // Damage, when shoot to collide with enemies, -1 HP
+            if (healthController) {
+                healthController.DoDamage(); // Damage, when shoot to collide with enemies, -1 HP
                 hitLine.SetPosition(0, bulletSpawner.position);
                 hitLine.SetPosition(1, hit.point);
             }
+            
         } else {
             // if it does not collide with anything, size 100 (You can convert 100 into a variable to modify it)
             hitLine.SetPosition(0, bulletSpawner.position);

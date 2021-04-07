@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemies_Controller : MonoBehaviour {
+public class HealthController : MonoBehaviour {
 
     [Tooltip("Vida total")]
     public int maxHP;
@@ -20,7 +20,7 @@ public class Enemies_Controller : MonoBehaviour {
     }
 
     // Function -1 HP and destroy of gameObject if die (HP == 0)
-    public void Attacked() {
+    public void DoDamage() {
         if (--actualHP <= 0) {
             Destroy(gameObject);
         }
