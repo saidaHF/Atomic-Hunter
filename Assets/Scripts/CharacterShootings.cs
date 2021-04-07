@@ -14,12 +14,13 @@ public class CharacterShootings : MonoBehaviour
         // Pabsorb - SHOOT
         if (Input.GetMouseButtonDown(0)) {
 
-            if(raycastShooting) 
-            StartCoroutine(Raycast_Shooting());
+            if (raycastShooting) {
+                StartCoroutine(Raycast_Shooting());
+            }
         }
         // Pabsorb - ABSORB
         if (Input.GetMouseButtonDown(1))
-        Debug.Log("Pressed secondary button ABSORB");
+        Debug.Log("Pressed secondary button: ABSORB");
     }
 
     IEnumerator Raycast_Shooting() {
@@ -33,12 +34,15 @@ public class CharacterShootings : MonoBehaviour
                 healthController.DoDamage(); // Damage, when shoot to collide with enemies, -1 HP
                 hitLine.SetPosition(0, bulletSpawner.position);
                 hitLine.SetPosition(1, hit.point);
+            } else { // collider with object (!healthController)
+                hitLine.SetPosition(0, bulletSpawner.position);
+                hitLine.SetPosition(1, hit.point);
             }
             
         } else {
-            // if it does not collide with anything, size 100 (You can convert 100 into a variable to modify it)
+            // if it does not collide with anything, size 50 (You can convert 100 into a variable to modify it)
             hitLine.SetPosition(0, bulletSpawner.position);
-            hitLine.SetPosition(1, bulletSpawner.position + bulletSpawner.right * 100);
+            hitLine.SetPosition(1, bulletSpawner.position + bulletSpawner.right * 50);
         }
 
         hitLine.enabled = true;

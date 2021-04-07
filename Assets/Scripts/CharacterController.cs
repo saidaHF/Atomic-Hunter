@@ -16,15 +16,19 @@ public class CharacterController : MonoBehaviour
     
     // Start is called before the first frame update
     void Start() {
-        body = GetComponent<Rigidbody2D>(); 
+        body = GetComponent<Rigidbody2D>();
+
+        this.lookingRight = true;
     }
 
     void Update () {
         // Edit -> Project Settings -> Input Manager -> Axes
         horizontal = Input.GetAxisRaw("Horizontal");
         vertical = Input.GetAxisRaw("Vertical");
-        
 
+        if ((horizontal == 1 && !lookingRight) || (horizontal == -1 && lookingRight)) {
+            this.Flip();
+        }
     }
 
     void FixedUpdate() {  

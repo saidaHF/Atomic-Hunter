@@ -12,13 +12,14 @@ GameObject:
   - component: {fileID: 2693442501305966164}
   - component: {fileID: 2656227634350766203}
   - component: {fileID: 8928030132144627609}
+  - component: {fileID: 7696458953548716461}
   m_Layer: 0
   m_Name: neutron
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &7307886321747945269
 Transform:
   m_ObjectHideFlags: 0
@@ -113,3 +114,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHP: 3
   actualHP: 3
+--- !u!95 &7696458953548716461
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7622562111305470079}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 425f3a94754f3214e8b1a1f52dc89cef, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

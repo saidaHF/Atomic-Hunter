@@ -21,6 +21,9 @@ public class GameController : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        
+        // For exit at the moment  
+        if (Input.GetKeyDown(KeyCode.Escape)) {
+            Application.Quit();
+        }
     }
 }

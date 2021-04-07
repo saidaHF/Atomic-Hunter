@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7236724997594769128}
   - component: {fileID: 6090829552777134333}
   - component: {fileID: 3818895081734974441}
+  - component: {fileID: 1973922371024885666}
   m_Layer: 0
   m_Name: electron
   m_TagString: Enemy
@@ -113,3 +114,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHP: 1
   actualHP: 1
+--- !u!95 &1973922371024885666
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7236724997594769130}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7dd581552b5bbde458e4bc51eaaa1eda, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
