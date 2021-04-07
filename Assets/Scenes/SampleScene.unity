@@ -437,7 +437,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.023495909, g: 0.41772744, b: 0.4528302, a: 1}
+  m_BackGroundColor: {r: 0.1509434, g: 0, b: 0.13158683, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -676,27 +676,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2139074220}
     m_Modifications:
-    - target: {fileID: 1836914584, guid: 669b7011267944a419647c1cb7935bb0, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1836914584, guid: 669b7011267944a419647c1cb7935bb0, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1836914584, guid: 669b7011267944a419647c1cb7935bb0, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1836914584, guid: 669b7011267944a419647c1cb7935bb0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3163154671169084460, guid: 669b7011267944a419647c1cb7935bb0,
-        type: 3}
-      propertyPath: runSpeed
-      value: 32
-      objectReference: {fileID: 0}
     - target: {fileID: 6678002384161739133, guid: 669b7011267944a419647c1cb7935bb0,
         type: 3}
       propertyPath: m_Name
@@ -756,11 +735,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6678002384161739135, guid: 669b7011267944a419647c1cb7935bb0,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 669b7011267944a419647c1cb7935bb0, type: 3}
@@ -1254,12 +1228,12 @@ PrefabInstance:
     - target: {fileID: 7307886321747945269, guid: 9e02e7ebe6147b249a88be8c0c6b5525,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 70.3
+      value: 97.7
       objectReference: {fileID: 0}
     - target: {fileID: 7307886321747945269, guid: 9e02e7ebe6147b249a88be8c0c6b5525,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 43.6
+      value: 24.3
       objectReference: {fileID: 0}
     - target: {fileID: 7307886321747945269, guid: 9e02e7ebe6147b249a88be8c0c6b5525,
         type: 3}
@@ -1310,11 +1284,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: neutron
-      objectReference: {fileID: 0}
-    - target: {fileID: 7622562111305470079, guid: 9e02e7ebe6147b249a88be8c0c6b5525,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e02e7ebe6147b249a88be8c0c6b5525, type: 3}
