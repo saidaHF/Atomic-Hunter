@@ -52,12 +52,12 @@ public class CharacterController : MonoBehaviour {
             GameOverMenu.gameObject.SetActive(true);
         }
         yield return new WaitForSeconds(waitTime);
-        touch = true; 
-    }   
+        touch = true;
+   }
 
-    public void Respawn() {
-        this.transform.position = RespawnPoint.position;
-    }
+   public void Respawn() {
+       gameObject.transform.position = new Vector2(RespawnPoint.transform.position.x, RespawnPoint.transform.position.y);
+   }
 }    
 
 

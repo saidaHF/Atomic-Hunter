@@ -290,7 +290,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 1165464676}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 211165338}
   m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f0e7411677cbd241a32852a5919a0d4, type: 3}
@@ -325,6 +325,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1513052940c73de4abede75ab45b2275, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  StartMenu: {fileID: 1842548023}
 --- !u!4 &154053683
 Transform:
   m_ObjectHideFlags: 0
@@ -337,13 +338,19 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &204587181 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7307886321747945269, guid: 9e02e7ebe6147b249a88be8c0c6b5525,
     type: 3}
   m_PrefabInstance: {fileID: 6686883531715182223}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &211165338 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6678002384161739133, guid: 669b7011267944a419647c1cb7935bb0,
+    type: 3}
+  m_PrefabInstance: {fileID: 1165464676}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &214482814 stripped
 Transform:
@@ -451,7 +458,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &414378275
 GameObject:
@@ -616,6 +623,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1513052940c73de4abede75ab45b2275, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  StartMenu: {fileID: 0}
 --- !u!4 &455395319 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7729409519313472896, guid: bdd6a6ef3d2724b44a164e793878d3d8,
@@ -1473,6 +1481,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 154053682}
+        m_MethodName: PausaJuego
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &828178565
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2211,7 +2230,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1108571736
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2484,17 +2503,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 82705936}
-        m_MethodName: Respawn
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 243702329}
         m_MethodName: SetActive
         m_Mode: 6
@@ -2506,6 +2514,28 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 211165338}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 82705936}
+        m_MethodName: Respawn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 1
 --- !u!114 &1135437160
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2832,6 +2862,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1513052940c73de4abede75ab45b2275, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  StartMenu: {fileID: 0}
 --- !u!1001 &1229073776
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3934,7 +3965,7 @@ Transform:
   - {fileID: 2082737913}
   - {fileID: 551981662}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &2141377872 stripped
 Transform:
