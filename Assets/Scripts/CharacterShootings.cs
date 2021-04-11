@@ -15,7 +15,7 @@ public class CharacterShootings : MonoBehaviour
         if (Input.GetMouseButtonDown(0)) {
 
             if (raycastShooting) {
-                StartCoroutine(Raycast_Shooting());
+                StartCoroutine(RaycastShooting());
             }
         }
         // Pabsorb - ABSORB
@@ -23,7 +23,7 @@ public class CharacterShootings : MonoBehaviour
         Debug.Log("Pressed secondary button: ABSORB");
     }
 
-    IEnumerator Raycast_Shooting() {
+    IEnumerator RaycastShooting() {
         RaycastHit2D hit = Physics2D.Raycast(bulletSpawner.position, bulletSpawner.right);
 
         if (hit) {

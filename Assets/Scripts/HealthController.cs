@@ -15,11 +15,10 @@ public class HealthController : MonoBehaviour {
     }
 
     // Update is called once per frame
-    void Update() {
+    void Update() {  
         
     }
-
-    // Function -1 HP and destroy of gameObject if die (HP == 0)
+    // Function DoDamage: -1 HP and destroy of gameObject if die (HP == 0)
     public void DoDamage() {
         if (--actualHP <= 0) {
             Destroy(gameObject);

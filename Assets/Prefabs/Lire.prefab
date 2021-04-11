@@ -174,6 +174,7 @@ GameObject:
   - component: {fileID: 551981657}
   - component: {fileID: 5973770285039063495}
   - component: {fileID: 7719960320326395074}
+  - component: {fileID: 1165464678}
   m_Layer: 0
   m_Name: Lire
   m_TagString: Player
@@ -271,7 +272,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f0e7411677cbd241a32852a5919a0d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  runSpeed: 32
+  runSpeed: 35
 --- !u!50 &1638335053
 Rigidbody2D:
   serializedVersion: 4
@@ -445,3 +446,17 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1165464678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6678002384161739133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 079ed9dc3bc813142b4f203149b548e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHP: 3
+  actualHP: 3

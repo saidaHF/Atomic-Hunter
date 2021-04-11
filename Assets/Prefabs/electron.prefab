@@ -13,6 +13,9 @@ GameObject:
   - component: {fileID: 6090829552777134333}
   - component: {fileID: 3818895081734974441}
   - component: {fileID: 1973922371024885666}
+  - component: {fileID: 355279378}
+  - component: {fileID: 1727863951}
+  - component: {fileID: 1727863950}
   m_Layer: 0
   m_Name: electron
   m_TagString: Enemy
@@ -97,9 +100,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.13, y: 0.18}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 1.9323978
+  m_Radius: 2.3403356
 --- !u!114 &3818895081734974441
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -133,3 +136,55 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!50 &355279378
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7236724997594769130}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 4
+--- !u!58 &1727863951
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7236724997594769130}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 23.974201
+--- !u!114 &1727863950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7236724997594769130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d346685da59cdbe42a69c24ef848f0ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  points: []
+  player: {fileID: 0}
+  speed: 10
