@@ -57,6 +57,7 @@ public class CharacterController : MonoBehaviour {
 
    public void Respawn() {
        gameObject.transform.position = new Vector2(RespawnPoint.transform.position.x, RespawnPoint.transform.position.y);
+       gameObject.GetComponent<HealthController>().actualHP = 3;
    }
 }    
 

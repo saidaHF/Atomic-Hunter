@@ -21,7 +21,7 @@ public class HealthController : MonoBehaviour {
     // Function DoDamage: -1 HP and destroy of gameObject if die (HP == 0)
     public void DoDamage() {
         if (--actualHP <= 0) {
-            if (!(gameObject.tag == "Player")) {
+            if (gameObject.tag != "Player") {
                 // Only enemies
                 Destroy(gameObject);
             }
