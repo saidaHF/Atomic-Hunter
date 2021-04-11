@@ -1,8 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class CharacterController : MonoBehaviour {   
+public class CharacterController : MonoBehaviour { 
+    public Transform RespawnPoint;
+    public RectTransform GameOverMenu; 
     Rigidbody2D body;
     float horizontal;
     float vertical;
@@ -35,7 +38,7 @@ public class CharacterController : MonoBehaviour {
     }
     private void OnCollisionStay2D(Collision2D collision) {
         if (touch && collision.gameObject.tag == "Enemy") {
-            StartCoroutine(touchAndDamage(2f));
+            StartCoroutine(touchAndDamage(1f));
         }
     }
     private IEnumerator touchAndDamage(float waitTime) {
@@ -44,9 +47,17 @@ public class CharacterController : MonoBehaviour {
         if (healthController) {
             healthController.DoDamage();
         }  
+        // Dead
+        if (healthController.actualHP == 0) {
+            GameOverMenu.gameObject.SetActive(true);
+        }
         yield return new WaitForSeconds(waitTime);
         touch = true; 
     }   
+
+    public void Respawn() {
+        this.transform.position = RespawnPoint.position;
+    }
 }    
 
 

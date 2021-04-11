@@ -4,15 +4,6 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour {
 
-    GameState gameState = GameState.Idle;
-
-    void StartGame() {
-        this.gameState = GameState.Playing;
-    }
-
-    void EndGame()  {
-        this.gameState = GameState.Idle;
-    }
 
     // Start is called before the first frame update
     void Start() {
@@ -21,9 +12,11 @@ public class GameController : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        // For exit at the moment  
-        if (Input.GetKeyDown(KeyCode.Escape)) {
-            Application.Quit();
-        }
+    }
+
+    // For exit:
+    public void Quit() {
+        Application.Quit();
+        Debug.Log("EXIT GAME");
     }
 }
