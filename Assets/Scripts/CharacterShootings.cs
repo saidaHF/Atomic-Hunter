@@ -9,18 +9,22 @@ public class CharacterShootings : MonoBehaviour
     private LineRenderer hitLine;
     [SerializeField]
     private bool raycastShooting = true;
+
+    public GameController gameController;
+
     void Update() {   // Detects clicks from the mouse:
+        if (!gameController.paused) {
+            // Pabsorb - SHOOT
+            if (Input.GetMouseButtonDown(0)) {
 
-        // Pabsorb - SHOOT
-        if (Input.GetMouseButtonDown(0)) {
-
-            if (raycastShooting) {
-                StartCoroutine(RaycastShooting());
+                if (raycastShooting) {
+                    StartCoroutine(RaycastShooting());
+                }
             }
+            // Pabsorb - ABSORB
+            if (Input.GetMouseButtonDown(1))
+            Debug.Log("Pressed secondary button: ABSORB");
         }
-        // Pabsorb - ABSORB
-        if (Input.GetMouseButtonDown(1))
-        Debug.Log("Pressed secondary button: ABSORB");
     }
 
     IEnumerator RaycastShooting() {

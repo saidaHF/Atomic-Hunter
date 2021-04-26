@@ -20,12 +20,16 @@ public class HealthController : MonoBehaviour {
     }
     // Function DoDamage: -1 HP and destroy of gameObject if die (HP == 0)
     public void DoDamage() {
-        if (--actualHP <= 0) {
+        --actualHP;
+        if (actualHP < 0) {
+            actualHP = 0;
+        }
+        if (actualHP <= 0) {
+            //HealthContainer.instance.DestroyHearth();
             if (gameObject.tag != "Player") {
                 // Only enemies
                 Destroy(gameObject);
             }
-            
         }
     }
 }

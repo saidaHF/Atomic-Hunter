@@ -7,6 +7,8 @@ TagManager:
   - Enemy
   - Point
   - RespawnPoint
+  - hearth
+  - ButtonsMenu
   layers:
   - Default
   - TransparentFX
@@ -19,7 +21,7 @@ TagManager:
   - Ballons
   - Player
   - Background
-  - 
+  - hearth
   - 
   - 
   - 
@@ -55,4 +57,13 @@ TagManager:
     locked: 0
   - name: Foreground
     uniqueID: 1659895111
+    locked: 0
+  - name: Hearth
+    uniqueID: 3061012309
+    locked: 0
+  - name: Rocks
+    uniqueID: 3064334375
+    locked: 0
+  - name: UI
+    uniqueID: 2293752723
     locked: 0

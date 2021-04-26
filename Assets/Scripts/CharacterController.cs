@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class CharacterController : MonoBehaviour { 
@@ -13,19 +14,35 @@ public class CharacterController : MonoBehaviour {
     bool touch = true;
     [Tooltip("Velocidad")]
     public float runSpeed = 20.0f;
+    public static CharacterController Instance { private set; get; }
+    public HealthController health;
+    public MenuController menuController;
+
+    public GameController gameController;
+    private void Awake(){
+        if(Instance == null){
+            Instance = this;
+        } else {
+            Destroy(gameObject);
+        }
+        health = GetComponent<HealthController>();
+    }    
 
     // Start is called before the first frame update
     void Start() {
         body = GetComponent<Rigidbody2D>();
         this.lookingRight = true;
+        gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
     }
     void Update () {
-        // Edit -> Project Settings -> Input Manager -> Axes
-        horizontal = Input.GetAxisRaw("Horizontal");
-        vertical = Input.GetAxisRaw("Vertical");
+        if (!gameController.paused) {
+            // Edit -> Project Settings -> Input Manager -> Axes
+            horizontal = Input.GetAxisRaw("Horizontal");
+            vertical = Input.GetAxisRaw("Vertical");
 
-        if ((horizontal == 1 && !lookingRight) || (horizontal == -1 && lookingRight)) {
-            this.Flip();
+            if ((horizontal == 1 && !lookingRight) || (horizontal == -1 && lookingRight)) {
+                this.Flip();
+            }
         }
     }
     void FixedUpdate() {  
@@ -37,27 +54,39 @@ public class CharacterController : MonoBehaviour {
         transform.Rotate(0f, 180f, 0f);
     }
     private void OnCollisionStay2D(Collision2D collision) {
-        if (touch && collision.gameObject.tag == "Enemy") {
-            StartCoroutine(touchAndDamage(1f));
+        if (!gameController.paused) {
+            if (touch && collision.gameObject.tag == "Enemy") {
+                StartCoroutine(touchAndDamage(1f));
+            }
         }
     }
+
     private IEnumerator touchAndDamage(float waitTime) {
         touch = false;
-        HealthController healthController = gameObject.GetComponent<HealthController>();   
-        if (healthController) {
-            healthController.DoDamage();
+        Renderer render = GetComponent<Renderer>();
+        render.material.color = Color.magenta;
+        HealthController health = gameObject.GetComponent<HealthController>();   
+        if (health) {
+            health.DoDamage();
         }  
         // Dead
-        if (healthController.actualHP == 0) {
-            GameOverMenu.gameObject.SetActive(true);
+        if (health.actualHP == 0) {
+            menuController.Retry();
         }
+        yield return new WaitForSeconds(0.5f);
+        render.material.color = Color.white;
         yield return new WaitForSeconds(waitTime);
         touch = true;
    }
 
    public void Respawn() {
-       gameObject.transform.position = new Vector2(RespawnPoint.transform.position.x, RespawnPoint.transform.position.y);
-       gameObject.GetComponent<HealthController>().actualHP = 3;
+       SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+       //gameObject.transform.position = new Vector2(RespawnPoint.transform.position.x, RespawnPoint.transform.position.y);
+       //gameObject.GetComponent<HealthController>().actualHP = 3;
+   }
+
+   private void OnDestroy(){
+       Instance = null;
    }
 }    
 
