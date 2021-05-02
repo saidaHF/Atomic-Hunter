@@ -9,6 +9,9 @@ TagManager:
   - RespawnPoint
   - hearth
   - ButtonsMenu
+  - hearth1
+  - hearth2
+  - hearth3
   layers:
   - Default
   - TransparentFX

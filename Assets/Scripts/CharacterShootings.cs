@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.Audio;
 
 public class CharacterShootings : MonoBehaviour
 {
@@ -9,14 +10,14 @@ public class CharacterShootings : MonoBehaviour
     private LineRenderer hitLine;
     [SerializeField]
     private bool raycastShooting = true;
-
     public GameController gameController;
+    public AudioSource laser;
 
     void Update() {   // Detects clicks from the mouse:
         if (!gameController.paused) {
             // Pabsorb - SHOOT
             if (Input.GetMouseButtonDown(0)) {
-
+                   laser.Play();
                 if (raycastShooting) {
                     StartCoroutine(RaycastShooting());
                 }

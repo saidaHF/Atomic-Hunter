@@ -17,8 +17,8 @@ public class CharacterController : MonoBehaviour {
     public static CharacterController Instance { private set; get; }
     public HealthController health;
     public MenuController menuController;
-
     public GameController gameController;
+
     private void Awake(){
         if(Instance == null){
             Instance = this;

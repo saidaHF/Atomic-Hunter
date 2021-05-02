@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HealthController : MonoBehaviour {
 
@@ -8,6 +9,8 @@ public class HealthController : MonoBehaviour {
     public int maxHP;
     [Tooltip("Vida actual")]
     public int actualHP;
+    public RectTransform hearthUI;
+    private float heartSize = 25.28615f;
 
     // Start is called before the first frame update
     void Start() {
@@ -29,6 +32,9 @@ public class HealthController : MonoBehaviour {
             if (gameObject.tag != "Player") {
                 // Only enemies
                 Destroy(gameObject);
+            } 
+            if (gameObject.tag == "Player") {
+               hearthUI.sizeDelta = new Vector2(heartSize * actualHP, heartSize);
             }
         }
     }
